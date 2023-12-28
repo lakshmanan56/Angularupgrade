@@ -44,6 +44,12 @@
   <p>Form Status: {{ profileForm.status }}</p>
   
   <button (click)="updateProfile()">Update Profile</button>
+
+  <div *ngFor="let todo of (allTodosSignal())">
+    <label >"title" {{  todo['title'] }}</label>
+    <label >"id" {{  todo['id'] }}</label>
+    <label >"Completed" {{  todo['Completed'] }}</label>
+  </div>
   
   
   <!-- 

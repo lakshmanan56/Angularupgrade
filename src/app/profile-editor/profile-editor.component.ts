@@ -1,6 +1,10 @@
 import { CommonModule, JsonPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { FormArray, FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, inject, signal } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FetchServiceBasicApproachService } from '../fetch-service-basic-approach.service';
+import { Observable, catchError, tap } from 'rxjs';
+import { ToDoInterface } from '../model/to-do-interface';
+import { FetchServiceClassicApproachService } from '../fetch-service-classic-approach.service';
 
 type AddressFormModel = {
   street: number;
@@ -19,14 +23,18 @@ type ProfileFormModel = {
 @Component({
   selector: 'app-profile-editor',
   standalone: true,
-  imports: [ CommonModule, FormsModule, ReactiveFormsModule, JsonPipe],
+  imports: [ CommonModule, FormsModule,ReactiveFormsModule,JsonPipe],
   templateUrl: './profile-editor.component.html',
   styleUrl: './profile-editor.component.css'
 })
 export class ProfileEditorComponent {
   private fb = inject(FormBuilder) 
+  private fetchServiceBasic = inject(FetchServiceBasicApproachService) 
+  private fetchServiceClassic = inject(FetchServiceClassicApproachService) 
+
+  public allTodosSignal = signal([]);
   
-  profileForm = this.fb.group({
+  profileForm  = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [null],
     address: this.fb.nonNullable.group({
@@ -41,6 +49,26 @@ export class ProfileEditorComponent {
   get aliases() {
     return this.profileForm.get('aliases') as FormArray;
   }
+
+  /*fetchTodos(): Observable<ToDoInterface[]> {
+    return this.fetchServiceBasic.fetchTodos().pipe(
+      tap((todos: ToDoInterface[]) => {
+        this.onComplete(todos)
+      }),
+      catchError((err) => {throw err} )
+    );
+  }*/
+
+  async fetchTodos() {
+    const myTodosResponse: any
+     = await this.fetchServiceClassic.fetchTodosClassicApproach();
+    this.allTodosSignal.set(myTodosResponse);
+  }
+
+  /*onComplete(data: any) 
+  :void {
+    console.table(data + "data")
+  }*/
 
 
 
@@ -60,7 +88,8 @@ export class ProfileEditorComponent {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+    console.table(this.profileForm.value);
+    this.fetchTodos()   
   }
 
 }
