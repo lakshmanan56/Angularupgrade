@@ -6,5 +6,5 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideHttpClient(withFetch()), provideRouter(routes), provideClientHydration(), ]
+  providers: [provideHttpClient(withFetch()), provideRouter(routes), provideClientHydration() ]
 };

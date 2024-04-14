@@ -1,3 +1,13 @@
 <h1>Reactive Forms</h1>
 
 <app-profile-editor></app-profile-editor>
+
+<h1>Angular Router App</h1>
+@if(showLinks) {
+<nav>
+  <ul>
+    <li><a routerLink="first-component" routerLinkActive="active" (click)="showLinks = false">First Component</a></li>
+    <li><a routerLink="second-component" routerLinkActive="active" (click)="showLinks = false">Second Component</a></li>
+  </ul>
+</nav>
+}
