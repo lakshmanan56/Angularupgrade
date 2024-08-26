@@ -80,6 +80,59 @@ ngRX store Vs Signal:
 
 https://blog.angulartraining.com/how-to-use-ngrx-signalstore-41852199035a
 
+https://itnext.io/architecting-angular-part-2-querying-and-managing-state-with-ngrx-signalstore-1c931ad309c4    
 
+Authentication system using JWT and localStorage in Angular 17
+
+https://medium.com/@naspy971/authentication-system-using-jwt-and-localstorage-in-angular-17-0da056f98610
+
+
+stop-using-input-output (instead use signals and model)
+
+https://blog.stackademic.com/stop-using-input-output-in-angular-93d4170a1083
+
+angular-design-patterns:
+
+https://vugar-005.medium.com/angular-design-patterns-strategy-pattern-ace359ae77b3
+
+API Design :
+
+https://levelup.gitconnected.com/api-design-101-from-basics-to-best-practices-a0261cdf8886
+
+ngx-translate
+https://medium.com/@lagacioneandre/angular-real-time-translations-with-ngx-translate-6978d6fe70bd
+
+
+Interview Questions:
+https://www.frontendinterviewquestions.com/interview-questions/page
+
+
+Auth Guards:
+
+https://medium.com/@hish.abdelshafouk/route-guards-in-angular-c9da0d815ef4  
+
+
+IIFE:
+
+https://medium.com/@rabailzaheer/iife-explained-immediately-invoked-function-expressions-fccd8f53123d
+
+
+https://sagarsnath.medium.com/angular-state-management-using-ngrx-store-b0a71389fd82
+
+//microfront end host and other MFE's
+
+
+https://www.angularminds.com/blog/how-to-build-micro-front-ends-using-module-federation-in-angular
+https://medium.com/@gurunadhpukkalla/implementing-microfrontends-in-angular-15-35c4d2307e36
+
+//fascade ngRX
+https://ng-journal.com/blog/2022-12-08-ngrx-component-store-meets-facade-pattern/
+https://medium.com/ngconf/ngrx-facade-pattern-f2c52857f5b6
+
+https://medium.com/ngconf/ngrx-facade-pattern-f2c52857f5b6 
+
+//Solid principle
+
+https://sheldonrcohen.medium.com/applying-solid-principles-to-angular-with-examples-fec460ffa541
 
 
