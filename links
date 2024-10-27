@@ -125,6 +125,14 @@ https://sagarsnath.medium.com/angular-state-management-using-ngrx-store-b0a71389
 https://www.angularminds.com/blog/how-to-build-micro-front-ends-using-module-federation-in-angular
 https://medium.com/@gurunadhpukkalla/implementing-microfrontends-in-angular-15-35c4d2307e36
 
+// communicationating datat between MFE's
+
+https://www.fabricgroup.com.au/blog/connecting-the-dots-data-communication-methods-for-micro-frontends
+
+https://dev.to/akdevcraft/ways-to-communicate-between-micro-frontends-51ol
+
+https://www.angulararchitects.io/en/blog/the-microfrontend-revolution-module-federation-in-webpack-5/
+
 //fascade ngRX
 https://ng-journal.com/blog/2022-12-08-ngrx-component-store-meets-facade-pattern/
 https://medium.com/ngconf/ngrx-facade-pattern-f2c52857f5b6
@@ -134,5 +142,40 @@ https://medium.com/ngconf/ngrx-facade-pattern-f2c52857f5b6
 //Solid principle
 
 https://sheldonrcohen.medium.com/applying-solid-principles-to-angular-with-examples-fec460ffa541
+
+
+Angular Advanced techniques:
+
+https://ashishsharma229.medium.com/advanced-angular-techniques-f003bc232a9c
+
+
+ngOnchanges:
+
+https://zerotomastery.io/blog/angular-ngonchanges-beginners-guide/
+
+10 Performance to improve Angular:
+https://akhilabhinav.medium.com/10-angular-best-practices-to-boost-your-application-performance-1a9516c0b09a
+
+resuable components
+
+https://medium.com/@iker.bedecarrax/make-your-angular-forms-robust-and-reusable-using-controlvalueaccessor-d3c23e8bdf7
+
+
+eventloop:      
+
+https://www.geeksforgeeks.org/what-is-an-event-loop-in-javascript/  
+
+
+https://medium.com/@rakesh.mr.0341/understanding-security-in-angular-applications-best-practices-and-implementation-edc773863d8a
+
+https://medium.com/@sehban.alam/best-practices-for-storing-access-tokens-in-angular-0d835c14e72c
+
+
+Best Practices for Angular Security
+Keep Dependencies Updated: Regularly update Angular and its dependencies to patch security vulnerabilities and benefit from the latest security enhancements.
+Input Validation: Always validate and sanitize user input to prevent injection attacks and ensure data integrity.
+Use HTTPS: Secure communication between the client and server using HTTPS to prevent data interception and tampering.
+Authentication and Authorization: Implement robust authentication mechanisms such as JWT (JSON Web Tokens) and proper authorization to restrict access to sensitive resources.
+Avoid Eval and InnerHTML: Avoid using eval() and innerHTML as they can introduce security vulnerabilities. Instead, utilize Angular's built-in sanitization mechanisms.
 
 
